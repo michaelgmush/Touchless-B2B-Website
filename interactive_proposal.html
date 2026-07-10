@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal: Touchless Fundraising B2B Portal</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .fade-in { animation: fadeIn 0.8s ease-in-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
+
+    <nav class="fixed w-full z-50 glass-panel border-b border-slate-200 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-indigo-600 flex items-center justify-center text-white shadow-lg">
+                        <i class="ph ph-handshake text-2xl"></i>
+                    </div>
+                    <span class="font-bold text-xl tracking-tight text-slate-900">Digital Proposal</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#overview" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">Overview</a>
+                    <a href="#approach" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">Technology</a>
+                    <a href="#investment" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">Investment</a>
+                    <a href="#pricing" class="bg-brand-600 text-white px-5 py-2.5 rounded-full font-semibold hover:bg-brand-700 transition-colors shadow-md hover:shadow-lg">Select Tier</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-br from-slate-100 to-slate-200 opacity-90"></div>
+            <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-brand-500 blur-3xl opacity-10"></div>
+            <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-indigo-500 blur-3xl opacity-10"></div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-in">
+            <span class="inline-block py-1 px-3 rounded-full bg-brand-100 text-brand-700 font-semibold text-sm mb-6 tracking-wide uppercase">Prepared for Touchless Fundraising</span>
+            <h1 class="text-5xl lg:text-7xl font-extrabold text-slate-900 tracking-tight mb-8">
+                B2B Wholesale <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-indigo-600">Ordering Portal</span>
+            </h1>
+            <p class="mt-4 max-w-2xl text-xl text-slate-600 mx-auto leading-relaxed">
+                A streamlined, modern, and highly intuitive platform designed to power your remote fundraising division with absolute efficiency.
+            </p>
+        </div>
+    </header>
+
+    <section id="overview" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Project Overview & Goals</h2>
+                <p class="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">The platform will serve as an elegant informational front-end for the public, while operating as a restricted, high-efficiency wholesale platform for approved sales representatives.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Goal 1 -->
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-12 h-12 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center mb-6">
+                        <i class="ph ph-lock-key text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Gated Experience</h3>
+                    <p class="text-slate-600 leading-relaxed">Public visitors can learn and apply. Only admin-approved reps can log in to view pricing and purchase.</p>
+                </div>
+                <!-- Goal 2 -->
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-12 h-12 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center mb-6">
+                        <i class="ph ph-shopping-cart text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Frictionless Ordering</h3>
+                    <p class="text-slate-600 leading-relaxed">Streamlined cart tailored for rapid, high-volume order building, shipping directly to schools.</p>
+                </div>
+                <!-- Goal 3 -->
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-12 h-12 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center mb-6">
+                        <i class="ph ph-users-three text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Custom Dashboards</h3>
+                    <p class="text-slate-600 leading-relaxed">Robust tools for reps to track orders and manage addresses, alongside deep Admin inventory control.</p>
+                </div>
+                <!-- Goal 4 -->
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-12 h-12 rounded-lg bg-orange-100 text-orange-600 flex items-center justify-center mb-6">
+                        <i class="ph ph-paint-brush text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Brand Cohesion</h3>
+                    <p class="text-slate-600 leading-relaxed">A polished UX/UI that is modern, bright, clean, and fun, functioning flawlessly across all devices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="approach" class="py-24 bg-slate-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-600 rounded-full blur-[120px] opacity-20"></div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:flex lg:items-center lg:justify-between gap-16">
+                <div class="lg:w-1/2 mb-12 lg:mb-0">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-brand-400 text-sm font-semibold mb-6">
+                        <i class="ph ph-rocket-launch"></i> Advanced Development
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-6">The "Antigravity" Advantage</h2>
+                    <p class="text-lg text-slate-300 mb-6 leading-relaxed">
+                        To ensure you receive an enterprise-grade platform while keeping development timelines highly efficient, I will be utilizing <strong>Google Antigravity</strong> to deploy AI developer agents throughout the build process.
+                    </p>
+                    <p class="text-lg text-slate-300 leading-relaxed">
+                        By leveraging advanced agentic workflows to assist with complex backend logic, I can drastically cut down on manual coding hours. This allows me to focus my 20+ years of UX and full-stack development experience on overarching strategy, polished brand cohesion, and delivering a flawless user experience.
+                    </p>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="bg-slate-800/50 backdrop-blur border border-slate-700 p-6 rounded-2xl">
+                            <i class="ph ph-clock text-3xl text-brand-400 mb-4 block"></i>
+                            <h4 class="text-xl font-bold mb-2">Rapid Deployment</h4>
+                            <p class="text-slate-400 text-sm">AI assistance speeds up complex data structures and boilerplate, accelerating launch.</p>
+                        </div>
+                        <div class="bg-slate-800/50 backdrop-blur border border-slate-700 p-6 rounded-2xl">
+                            <i class="ph ph-code text-3xl text-brand-400 mb-4 block"></i>
+                            <h4 class="text-xl font-bold mb-2">Clean Codebase</h4>
+                            <p class="text-slate-400 text-sm">Ensures the underlying Shopify architecture is highly modular and future-proof.</p>
+                        </div>
+                        <div class="bg-slate-800/50 backdrop-blur border border-slate-700 p-6 rounded-2xl sm:col-span-2">
+                            <i class="ph ph-trend-up text-3xl text-brand-400 mb-4 block"></i>
+                            <h4 class="text-xl font-bold mb-2">Enterprise B2B on Standard Shopify</h4>
+                            <p class="text-slate-400 text-sm">Standard Shopify natively restricts true B2B capabilities to their $2,000/mo Plus tier. My architectural approach builds these capabilities into a standard plan, saving you tens of thousands of dollars annually.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="investment" class="py-20 bg-slate-50 border-b border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl mb-6">Professional Rate & Investment</h2>
+            <p class="text-lg text-slate-600 mb-10">
+                The industry standard for a dual-threat professional with over 20 years of UX Strategy and Full-Stack Development experience typically ranges between $150 to $200+ per hour. Because I deeply value our relationship and want to ensure the success of this new division, I am applying a substantial discount.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+                <div class="bg-white px-8 py-6 rounded-2xl border border-slate-200 shadow-sm w-full sm:w-auto opacity-70">
+                    <p class="text-sm text-slate-500 uppercase tracking-wider font-semibold mb-1">Standard Market Rate</p>
+                    <p class="text-3xl font-bold text-slate-400 line-through decoration-red-500 decoration-2">$175 / hr</p>
+                </div>
+                <div class="bg-brand-50 px-8 py-6 rounded-2xl border-2 border-brand-200 shadow-md w-full sm:w-auto transform scale-105">
+                    <p class="text-sm text-brand-600 uppercase tracking-wider font-bold mb-1">Friends & Family Rate</p>
+                    <p class="text-4xl font-extrabold text-brand-700">$125 / hr</p>
+                    <p class="text-sm text-brand-600 mt-2 font-medium">Nearly 30% Savings</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl mb-4">Development Phases & Tiers</h2>
+                <p class="text-lg text-slate-600 max-w-2xl mx-auto">Select the tier that best aligns with your immediate launch goals. We can always build Phase 3 features later.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+                
+                <!-- Tier 1 -->
+                <div id="tier-1" class="tier-card relative flex flex-col p-8 rounded-3xl bg-white border border-slate-200 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer" onclick="selectTier(1)">
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-2">Tier 1: Core MVP</h3>
+                        <p class="text-slate-500 text-sm min-h-[40px]">Focuses on getting the exact core requirements launched securely and efficiently.</p>
+                    </div>
+                    <div class="mb-6 pb-6 border-b border-slate-100">
+                        <p class="text-4xl font-extrabold text-slate-900">$5,000<span class="text-lg text-slate-500 font-normal"> - $6,250</span></p>
+                        <p class="text-sm text-slate-500 mt-2">Est. 40 - 50 Hours</p>
+                    </div>
+                    <ul class="flex-1 space-y-4 mb-8">
+                        <li class="flex items-start"><i class="ph ph-check-circle text-brand-500 text-xl mr-3 shrink-0"></i><span class="text-slate-600 text-sm">Premium theme setup & brand application</span></li>
+                        <li class="flex items-start"><i class="ph ph-check-circle text-brand-500 text-xl mr-3 shrink-0"></i><span class="text-slate-600 text-sm">B2B Logic (Hide pricing from public, rep approval flow)</span></li>
+                        <li class="flex items-start"><i class="ph ph-check-circle text-brand-500 text-xl mr-3 shrink-0"></i><span class="text-slate-600 text-sm">Cart Customization (Mandatory School Name field)</span></li>
+                        <li class="flex items-start"><i class="ph ph-check-circle text-brand-500 text-xl mr-3 shrink-0"></i><span class="text-slate-600 text-sm">Standard Catalog & Rep Dashboard setup</span></li>
+                    </ul>
+                    <button class="w-full py-3 rounded-xl font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors tier-btn">Select Tier 1</button>
+                    <div class="absolute inset-0 border-2 border-transparent rounded-3xl pointer-events-none tier-border transition-colors"></div>
+                </div>
+
+                <!-- Tier 2 (Recommended) -->
+                <div id="tier-2" class="tier-card relative flex flex-col p-8 rounded-3xl bg-slate-900 border border-slate-800 shadow-2xl hover:shadow-3xl transition-all duration-300 cursor-pointer lg:-mt-4 lg:mb-4 transform lg:scale-105 ring-4 ring-brand-500/30" onclick="selectTier(2)">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-brand-500 to-indigo-500 text-white px-4 py-1 rounded-full text-sm font-bold tracking-wide uppercase shadow-md">
+                        Recommended
+                    </div>
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Tier 2: Professional</h3>
+                        <p class="text-slate-400 text-sm min-h-[40px]">Includes MVP, plus advanced custom code for a truly frictionless experience.</p>
+                    </div>
+                    <div class="mb-6 pb-6 border-b border-slate-700">
+                        <p class="text-4xl font-extrabold text-white">$7,500<span class="text-lg text-slate-400 font-normal"> - $8,750</span></p>
+                        <p class="text-sm text-slate-400 mt-2">Est. 60 - 70 Hours</p>
+                    </div>
+                    <ul class="flex-1 space-y-4 mb-8">
+                        <li class="flex items-start"><i class="ph ph-check-circle text-brand-400 text-xl mr-3 shrink-0"></i><span class="text-slate-300 text-sm"><strong class="text-white">Everything in Tier 1</strong></span></li>
+                        <li class="flex items-start"><i class="ph ph-check-circle text-brand-400 text-xl mr-3 shrink-0"></i><span class="text-slate-300 text-sm">Advanced Dashboard: Saved Carts, Favorites, 1-Click Reorder</span></li>
+                        <li class="flex items-start"><i class="ph ph-check-circle text-brand-400 text-xl mr-3 shrink-0"></i><span class="text-slate-300 text-sm">Custom Bolt Bands variant display architecture</span></li>
+                        <li class="flex items-start"><i class="ph ph-check-circle text-brand-400 text-xl mr-3 shrink-0"></i><span class="text-slate-300 text-sm">Streamlined Registration Workflow with automated triggers</span></li>
+                    </ul>
+                    <button class="w-full py-3 rounded-xl font-semibold bg-brand-500 text-white hover:bg-brand-600 transition-colors shadow-lg tier-btn">Select Tier 2</button>
+                    <div class="absolute inset-0 border-2 border-transparent rounded-3xl pointer-events-none tier-border transition-colors"></div>
+                </div>
+
+                <!-- Tier 3 -->
+                <div id="tier-3" class="tier-card relative flex flex-col p-8 rounded-3xl bg-white border border-slate-200 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer" onclick="selectTier(3)">
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-2">Tier 3: The Vision</h3>
+                        <p class="text-slate-500 text-sm min-h-[40px]">Includes Professional, plus the immediate custom development of future goals.</p>
+                    </div>
+                    <div class="mb-6 pb-6 border-b border-slate-100">
+                        <p class="text-4xl font-extrabold text-slate-900">$11,250<span class="text-lg text-slate-500 font-normal"> - $13,125</span></p>
+                        <p class="text-sm text-slate-500 mt-2">Est. 90 - 105 Hours</p>
+                    </div>
+                    <ul class="flex-1 space-y-4 mb-8">
+                        <li class="flex items-start"><i class="ph ph-check-circle text-brand-500 text-xl mr-3 shrink-0"></i><span class="text-slate-600 text-sm"><strong class="text-slate-900">Everything in Tier 2</strong></span></li>
+                        <li class="flex items-start"><i class="ph ph-check-circle text-brand-500 text-xl mr-3 shrink-0"></i><span class="text-slate-600 text-sm">Custom Bundle Builder application</span></li>
+                        <li class="flex items-start"><i class="ph ph-check-circle text-brand-500 text-xl mr-3 shrink-0"></i><span class="text-slate-600 text-sm">School Profile Database (CRM expansion for reps)</span></li>
+                    </ul>
+                    <button class="w-full py-3 rounded-xl font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors tier-btn">Select Tier 3</button>
+                    <div class="absolute inset-0 border-2 border-transparent rounded-3xl pointer-events-none tier-border transition-colors"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                
+                <!-- Software Costs -->
+                <div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                        <i class="ph ph-credit-card text-brand-600 text-3xl"></i> Software & Licensing (Client Managed)
+                    </h3>
+                    <p class="text-slate-600 mb-6">You will hold the licenses and ownership for the platform. These are the estimated operational costs billed directly to you.</p>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center p-4 bg-white rounded-xl border border-slate-200">
+                            <div>
+                                <p class="font-bold text-slate-900">Shopify Hosting Plan</p>
+                                <p class="text-sm text-slate-500">Standard Basic Plan</p>
+                            </div>
+                            <p class="font-semibold text-slate-700">~$39 / mo</p>
+                        </div>
+                        <div class="flex justify-between items-center p-4 bg-white rounded-xl border border-slate-200">
+                            <div>
+                                <p class="font-bold text-slate-900">Premium Shopify Theme</p>
+                                <p class="text-sm text-slate-500">One-time fee</p>
+                            </div>
+                            <p class="font-semibold text-slate-700">~$320 - $380</p>
+                        </div>
+                        <div class="flex justify-between items-center p-4 bg-white rounded-xl border border-slate-200">
+                            <div>
+                                <p class="font-bold text-slate-900">Third-Party B2B App Stack</p>
+                                <p class="text-sm text-slate-500">Gating, Registration, Custom Fields</p>
+                            </div>
+                            <p class="font-semibold text-slate-700">~$40 - $90 / mo</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Added Value -->
+                <div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                        <i class="ph ph-sparkle text-brand-600 text-3xl"></i> Included in All Tiers
+                    </h3>
+                    <div class="bg-white p-8 rounded-2xl border border-slate-200 h-full shadow-sm">
+                        <ul class="space-y-6">
+                            <li class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-brand-50 flex items-center justify-center text-brand-600 shrink-0 mr-4">
+                                    <i class="ph ph-devices text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-slate-900">Rigorous QA & Testing</p>
+                                    <p class="text-sm text-slate-600 mt-1">Extensive device testing of the complete user flow from public visitor to admin approval.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-brand-50 flex items-center justify-center text-brand-600 shrink-0 mr-4">
+                                    <i class="ph ph-video-camera text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-slate-900">Admin Training & Handoff</p>
+                                    <p class="text-sm text-slate-600 mt-1">Recorded video walkthrough showing your team how to manage inventory, approve reps, and fulfill orders.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-brand-50 flex items-center justify-center text-brand-600 shrink-0 mr-4">
+                                    <i class="ph ph-magnifying-glass text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-slate-900">Technical SEO Foundations</p>
+                                    <p class="text-sm text-slate-600 mt-1">Proper site structure so public-facing informational pages index correctly on Google.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-brand-50 flex items-center justify-center text-brand-600 shrink-0 mr-4">
+                                    <i class="ph ph-lifebuoy text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-slate-900">30 Days Post-Launch Support</p>
+                                    <p class="text-sm text-slate-600 mt-1">Covering any bug fixes or minor tweaks to ensure the platform operates perfectly in the real world.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="summary" class="py-20 bg-slate-900 text-white text-center transition-all duration-500">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-6">Ready to get started?</h2>
+            
+            <div id="selection-summary" class="hidden mb-8 p-6 bg-slate-800 rounded-2xl border border-slate-700 fade-in">
+                <p class="text-slate-400 mb-2 uppercase tracking-widest text-sm font-semibold">Your Selection</p>
+                <h3 id="selected-tier-name" class="text-2xl font-bold text-brand-400 mb-4">Tier 2: Professional</h3>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-8">
+                    <div>
+                        <p class="text-sm text-slate-400">Total Estimate</p>
+                        <p id="selected-total" class="text-2xl font-bold text-white">$7,500 - $8,750</p>
+                    </div>
+                    <div class="hidden sm:block w-px h-12 bg-slate-600"></div>
+                    <div>
+                        <p class="text-sm text-slate-400">50% Deposit to Begin</p>
+                        <p id="selected-deposit" class="text-2xl font-bold text-white">$3,750</p>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
+                Once you confirm your path, I will send over the deposit invoice. Upon payment, we will officially kick off the project, select the premium theme, and deploy the development agents!
+            </p>
+            <button onclick="approveProposal()" class="bg-brand-500 hover:bg-brand-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg hover:shadow-brand-500/25 inline-flex items-center gap-2">
+                Approve Proposal <i class="ph ph-arrow-right"></i>
+            </button>
+            <p id="approval-msg" class="hidden mt-4 text-emerald-400 font-medium fade-in"><i class="ph ph-check-circle align-middle mr-1"></i> I will contact you to initiate the next steps!</p>
+        </div>
+    </section>
+
+    <script>
+        const tierData = {
+            1: { name: "Tier 1: Core MVP", total: "$5,000 - $6,250", deposit: "$2,500" },
+            2: { name: "Tier 2: Professional", total: "$7,500 - $8,750", deposit: "$3,750" },
+            3: { name: "Tier 3: The Vision", total: "$11,250 - $13,125", deposit: "$5,625" }
+        };
+
+        function selectTier(tierNumber) {
+            // Reset all tiers visually
+            document.querySelectorAll('.tier-card').forEach(card => {
+                const border = card.querySelector('.tier-border');
+                border.classList.remove('border-brand-500');
+                border.classList.add('border-transparent');
+                
+                const btn = card.querySelector('.tier-btn');
+                if(!card.id.includes('tier-2')) { // Keep tier 2 btn colored by default unless unselected
+                     btn.classList.remove('bg-brand-500', 'text-white');
+                     btn.classList.add('bg-slate-100', 'text-slate-700');
+                     btn.innerText = "Select " + card.querySelector('h3').innerText.split(':')[0];
+                } else {
+                     btn.innerText = "Select Tier 2";
+                }
+            });
+
+            // Highlight selected tier
+            const selected = document.getElementById('tier-' + tierNumber);
+            selected.querySelector('.tier-border').classList.remove('border-transparent');
+            selected.querySelector('.tier-border').classList.add('border-brand-500');
+            
+            const selectedBtn = selected.querySelector('.tier-btn');
+            selectedBtn.classList.remove('bg-slate-100', 'text-slate-700');
+            selectedBtn.classList.add('bg-brand-500', 'text-white');
+            selectedBtn.innerHTML = `<i class="ph ph-check-circle align-middle mr-1"></i> Selected`;
+
+            // Update footer summary
+            const summaryDiv = document.getElementById('selection-summary');
+            document.getElementById('selected-tier-name').innerText = tierData[tierNumber].name;
+            document.getElementById('selected-total').innerText = tierData[tierNumber].total;
+            document.getElementById('selected-deposit').innerText = tierData[tierNumber].deposit;
+            
+            summaryDiv.classList.remove('hidden');
+            
+            // Scroll to summary
+            document.getElementById('summary').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Custom notification replacement for alert()
+        function approveProposal() {
+            const summaryDiv = document.getElementById('selection-summary');
+            if(summaryDiv.classList.contains('hidden')) {
+                // If they haven't selected a tier, auto-select Tier 2
+                selectTier(2);
+            }
+            document.getElementById('approval-msg').classList.remove('hidden');
+        }
+
+        // Navbar blur effect on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 10) {
+                nav.classList.add('shadow-sm');
+            } else {
+                nav.classList.remove('shadow-sm');
+            }
+        });
+    </script>
+</body>
+</html>
